@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 
 export async function GET(req: Request) {
-  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  let siteUrl = "https://kelwintan.github.io"
 
   if (!siteUrl) {
     throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
@@ -20,8 +20,8 @@ export async function GET(req: Request) {
     author,
     id: siteUrl,
     link: siteUrl,
-    // image: `${siteUrl}/favicon.ico`,
-    // favicon: `${siteUrl}/favicon.ico`,
+    image: `${siteUrl}/favicon.ico`,
+    favicon: `${siteUrl}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}`,
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,

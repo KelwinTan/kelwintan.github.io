@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   // Add basePath
   basePath: '/github-pages',
+  distDir: 'out',
 }
 
 // const withMDX = nextMDX({
